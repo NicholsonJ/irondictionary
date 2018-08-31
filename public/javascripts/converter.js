@@ -2,7 +2,9 @@ $('.text-convert').click(e => {
   e.preventDefault();
   //console.log($('textarea[name=received-text]').val());
   dictionaryApi.get('').then(response => {
-    let text = $('textarea[name=received-text]').val();
+    let text = $('textarea[name=received-text]')
+      .val()
+      .toLowerCase();
     for (let i = 0; i < response.data.length; i++) {
       var originalWord = response.data[i].originalWord;
       var convertedWord = response.data[i].convertedWord;

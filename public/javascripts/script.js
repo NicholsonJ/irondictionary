@@ -24,11 +24,10 @@ dictionaryApi.get('').then(response => {
 
 $('.create-word').click(e => {
   e.preventDefault();
-  let originalWord = $('input[name=originalWord]').val();
+  let originalWord = $('input[name=originalWord]')
+    .val()
+    .toLowerCase();
   let convertedWord = $('input[name=convertedWord]').val();
-
-  $('input[name=originalWord]').val('');
-  $('input[name=convertedWord]').val('');
 
   dictionaryApi
     .post('', {

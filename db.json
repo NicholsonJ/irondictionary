@@ -2,26 +2,26 @@
   "wordAdjustments": [
     {
       "id": 2,
-      "originalWord": "Mir",
+      "originalWord": "mir",
       "convertedWord": "Sensei"
     },
     {
-      "originalWord": "Maxence",
+      "originalWord": "maxence",
       "convertedWord": "Wizard",
       "id": 3
     },
     {
-      "originalWord": "Anita",
+      "originalWord": "anita",
       "convertedWord": "Badass",
       "id": 4
     },
     {
-      "originalWord": "Shit",
+      "originalWord": "shit",
       "convertedWord": "Poop",
       "id": 5
     },
     {
-      "originalWord": "Coding",
+      "originalWord": "coding",
       "convertedWord": "Not Coding",
       "id": 6
     },
@@ -29,6 +29,11 @@
       "originalWord": "some word",
       "convertedWord": "other word",
       "id": 7
+    },
+    {
+      "originalWord": "silvio",
+      "convertedWord": "Baller",
+      "id": 8
     }
   ]
 }
