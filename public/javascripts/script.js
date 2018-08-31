@@ -11,7 +11,6 @@ let dictionaryApi = axios.create({
 });
 
 dictionaryApi.get('').then(response => {
-  console.log(response.data);
   $('.word-list').html(`<ul></ul>`);
   for (let i = 0; i < response.data.length; i++) {
     createListItem({
@@ -24,9 +23,8 @@ dictionaryApi.get('').then(response => {
 
 $('.create-word').click(e => {
   e.preventDefault();
-  let originalWord = $('input[name=originalWord]')
-    .val()
-    .toLowerCase();
+  let originalWord = $('input[name=originalWord]').val();
+
   let convertedWord = $('input[name=convertedWord]').val();
 
   dictionaryApi
@@ -35,7 +33,6 @@ $('.create-word').click(e => {
       convertedWord
     })
     .then(response => {
-      console.log('Word created', response.data);
       createListItem(response.data);
     });
 });
@@ -51,7 +48,6 @@ function createListItem(word) {
     // let id = $(this).attr('data-id') // Same
     let id = $(this).data('id');
     dictionaryApi.delete('/' + id).then(response => {
-      console.log(response.data);
       $(this)
         .parent()
         .remove();
